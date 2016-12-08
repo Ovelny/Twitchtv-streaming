@@ -1,42 +1,36 @@
 'use strict';
 
-function CORSRequest(method, url) {
-    const xhr = new XMLHttpRequest()
+function bindData() {
+    let users = [], logos = [], games = [], descriptions = [], urls = [], banners = []
 
-    if ('withCredentials' in xhr) {
-        xhr.open(method, url, true)
+    for (let i = 0; i < data.length; i++) {
+
+        if (data[i].stream != null) {
+            users.push(data[i].stream.display_name)
+            logos.push(data[i].stream.logo)
+            games.push(data[i].stream.game)
+            descriptions.push(data[i].stream.status)
+            urls.push(data[i].stream.url)
+            banners.push(data[i].stream.profile_banner)
+        }
+
     }
-    else if (typeof XDomainRequest != 'undefined') {
-        xhr = new XDomainRequest()
-        xhr.open(method, url)
-    }
-    else {
-        xhr = null
-    }
-
-    return xhr
 }
 
-function APIRequest() {
+function updateDOM() {
 
 }
 
-function getJSON() {
+function isStreamDeleted() {
 
 }
 
-function currentStreamStatus() {
+function isStreamActive() {
 
 }
 
-function streamDeleted() {
+function isStreamInactive() {
 
 }
 
-function updateStatus() {
-
-}
-
-function updateInfo() {
-
-}
+console.log(data)
