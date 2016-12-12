@@ -1,4 +1,4 @@
-let data = [
+const data = [
     {
         "stream": {
             "mature": false,
