@@ -3,9 +3,11 @@
     margin-bottom: 10rem;
 }
 
-.container {
-    padding-left: 200px;
-    padding-right: 200px;
+@media screen and (min-width:1280px) {
+    .container {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
 }
 
 label {
