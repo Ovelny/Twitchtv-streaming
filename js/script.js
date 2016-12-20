@@ -59,7 +59,6 @@ TwitchViewer.prototype.toggleOnline = function () {
     })
 }
 
-console.log(data)
 const start = new TwitchViewer()
 start.updateDOM()
 start.toggleOnline()
